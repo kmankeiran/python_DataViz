@@ -8,14 +8,14 @@ with open('data/OlympicsWinter.csv') as csvfile:
     reader = csv.reader(csvfile)
     line_count = 0
     for row in reader:
-        if row[5] == "Men":
+        if row[5] == "Men" and row[7] =="Gold":
             men.append(row)
         else:
             women.append(row)
         line_count += 1
 
-print('The total number of men winning medals:', len(men))
-print('The total number of women winning medals:', len(women))
+print('The total number of men winning golds:', len(men))
+print('The total number of women winning golds:', len(women))
 
 # The number of medals won by the gender divided by how many medals there are in total
 pct_men = int(len(men) / line_count * 100)
