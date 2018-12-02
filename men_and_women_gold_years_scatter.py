@@ -1,17 +1,17 @@
 import csv
 import matplotlib.pyplot as plt
 
-year = []
-women = []
-men = []
-
-categories = []
-
 gold_1924 = []
 gold_1948 = []
 gold_1972 = []
 gold_2002 = []
 gold_2014 = []
+
+women_1924 = []
+women_1948 = []
+women_1972 = []
+women_2002 = []
+women_2014 = []
 
 men_1924 = []
 men_1948 = []
@@ -19,11 +19,12 @@ men_1972 = []
 men_2002 = []
 men_2014 = []
 
-women_1924 = []
-women_1948 = []
-women_1972 = []
-women_2002 = []
-women_2014 = []
+categories = []
+
+year = [1924, 1948, 1972, 2002, 2014]
+women = [len(women_1924), len(women_1948), len(women_1972), len(women_2002), len(women_2014)]
+men = [len(men_1924), len(men_1948), len(men_1972), len(men_2002), len(men_2014)]
+
 
 with open('data/OlympicsWinter.csv') as csvfile:
     reader = csv.reader(csvfile)
